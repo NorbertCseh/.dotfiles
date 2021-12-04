@@ -1,22 +1,25 @@
-# install nix
-curl -L https://nixos.org/nix/install | sh
+# install brew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-# source nix
-. ~/.nix-profile/etc/profile.d/nix.sh
+# setup brew
+echo 'eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> ~/.zprofile
+eval "$(home/linuxbrew/.linuxbrew/bin/brew shellenv)"  /
 
-# install packages
-nix-env -iA \
-	nixpkgs.zsh \
-	nixpkgs.antibody \
-	nixpkgs.git \
-	nixpkgs.neovim \
-	nixpkgs.tmux \
-	nixpkgs.stow \
-	nixpkgs.yarn \
-	nixpkgs.fzf \
-	nixpkgs.ripgrep \
-	nixpkgs.bat \
-	nixpkgs.direnv
+# install packages with brew
+brew install \
+  zsh \
+  antibody \
+  git \
+  neovim \
+  tmux \
+  stow \
+  yarn \
+  fzf \
+  ripgrep \
+  bat \
+  direnv \
+  npm \
+  node
 
 # stow
 stow git
