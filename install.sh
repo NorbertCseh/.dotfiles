@@ -1,4 +1,4 @@
-"Update system"
+echo "Update system"
 sudo apt update
 sudo apt upgrade
 
