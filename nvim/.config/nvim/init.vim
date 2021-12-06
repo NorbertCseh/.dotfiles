@@ -96,6 +96,9 @@ endfunction
 " --- Highlight the symbol and its references when holding the cursor.
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
+" --- Prettier setup
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
+
 " --- Colors
 
 set background=dark

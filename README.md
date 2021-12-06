@@ -8,6 +8,11 @@
 
 - :PlugInstall :PlugClean :UpdateRemotePlugins
 
+## CocInstall
+
+cd ~/.config/nvim/plugged/coc.nvim
+yarn install
+
 ## Auto completion and linting
 
 - :CocInstall coc-tsserver

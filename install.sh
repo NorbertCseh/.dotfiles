@@ -2,6 +2,10 @@ echo "Update system"
 sudo apt update
 sudo apt upgrade
 
+echo "Install node"
+curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
 echo "Install nix"
 curl -L https://nixos.org/nix/install | sh
 
@@ -14,7 +18,6 @@ nix-env -iA \
 	nixpkgs.antibody \
 	nixpkgs.git \
 	nixpkgs.neovim \
-	nixpkgs.tmux \
 	nixpkgs.stow \
 	nixpkgs.yarn \
 	nixpkgs.fzf \
