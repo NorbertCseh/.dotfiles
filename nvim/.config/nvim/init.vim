@@ -46,11 +46,12 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'tc50cal/vim-terminal'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
 
 call plug#end()
 
 " --- Custom
-
 nnoremap <C-f> :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
@@ -66,6 +67,12 @@ function! s:check_back_space() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
+
+" --- Telescope commands 
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 " --- Control+Space for trigger completion
 if has('nvim')
