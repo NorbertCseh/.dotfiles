@@ -10,6 +10,7 @@ set expandtab
 set smartindent
 set number
 set numberwidth=1
+set relativenumber
 set signcolumn=yes
 set noswapfile
 set nobackup
@@ -36,7 +37,7 @@ Plug 'kyazdani42/nvim-web-devicons'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'akinsho/bufferline.nvim'
 Plug 'machakann/vim-highlightedyank'
-Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+Plug 'EdenEast/nightfox.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'preservim/nerdtree'
 Plug 'neoclide/coc.nvim'
@@ -49,6 +50,8 @@ Plug 'tc50cal/vim-terminal'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzy-native.nvim'
+Plug 'calviken/vim-gdscript3'
+Plug 'rust-lang/rust.vim'
 
 call plug#end()
 
@@ -110,5 +113,4 @@ command! -nargs=0 Prettier :CocCommand prettier.formatFile
 " --- Colors
 
 set background=dark
-colorscheme tokyonight
-
+colorscheme nightfox

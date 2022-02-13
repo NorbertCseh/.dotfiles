@@ -1,14 +1,20 @@
 {
   "coc.preferences.formatOnSaveFiletypes": [
-    "js",
-    "ts",
-    "jsx",
-    "tsx",
-    "vue",
     "css",
     "markdown",
     "json",
     "html",
-    "cs"
-  ]
+    "java",
+    "cs",
+    "js",
+    "ts",
+    "tsx",
+    "jsx",
+    "yarn",
+    "vue",
+    "rs"
+  ],
+  "prettier.tabWidth": 2,
+  "prettier.bracketSpacing": true,
+  "prettier.semi": true
 }
