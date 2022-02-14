@@ -110,7 +110,9 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 " --- Prettier setup
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
-" --- Colors
+" --- Rust format on save
+let g:rustfmt_autosave = 1
 
+" --- Colors
 set background=dark
 colorscheme nightfox
